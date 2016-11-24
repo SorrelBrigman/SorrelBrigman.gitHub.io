@@ -1,0 +1,28 @@
+/*****************************************************
+Page Stylings
+*****************************************************/
+
+.background {
+	background-color: #4d3e4d;
+}
+
+.page-wrapper {
+	background-color: #D9D3BD;
+}
+
+.image {
+	background-color: #AB94AB;
+}
+
+/*****************************************************
+Layout Stylings
+*****************************************************/
+
+.background {
+	padding: 5%, 0, 7%, 5%;
+}
+
+.page-wrapper {
+	margin: 5%, 0, 7%, 5%;
+}
+
