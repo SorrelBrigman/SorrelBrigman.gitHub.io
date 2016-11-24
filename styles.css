@@ -1,6 +1,10 @@
 /*****************************************************
 Page Stylings
 *****************************************************/
+.body {
+	color: #4d3e4d;
+}
+
 
 .background {
 	background-color: #4d3e4d;
@@ -12,6 +16,28 @@ Page Stylings
 
 .image {
 	background-color: #AB94AB;
+}
+
+.prismaPhoto {
+	opacity: .4;
+}
+
+.titleBlock {
+	background-color: #728B91;
+}
+
+.titleBlock h1 {
+  color: #d9d3bd;
+}
+
+.titleBlock h4 {
+	color: #4d3d4d;
+}
+
+.button button {
+	background-color: #728B91;
+	color: #d9d3bD;
+	border: #4d3e4d;
 }
 
 /*****************************************************
