@@ -1,6 +1,9 @@
 /*****************************************************
 Page Stylings
 *****************************************************/
+
+/*Color for overall page*/
+
 .body {
 	color: #4d3e4d;
 }
@@ -14,13 +17,19 @@ Page Stylings
 	background-color: #D9D3BD;
 }
 
+/*color*/
+
 .mainImage {
 	background-color: #AB94AB;
 }
 
+/*sets image to slightly transparent*/
+
 .prismaPhoto {
 	opacity: .4;
 }
+
+/*Title block colors*/
 
 .titleBlock {
 	background-color: #728B91;
@@ -34,6 +43,8 @@ Page Stylings
 	color: #4d3d4d;
 }
 
+/*Button colors*/
+
 .button button {
 	background-color: #728B91;
 	color: #d9d3bD;
@@ -44,6 +55,9 @@ Page Stylings
 Layout Stylings
 *****************************************************/
 
+
+
+/*Over all page layout*/
 .background {
 	padding-top: 2em;
 	padding-right: 0;
@@ -57,21 +71,35 @@ Layout Stylings
 	padding-left: 3em;
 	padding-bottom: 4em;
 }
+
+
+/*Layout and positioning of titleblock*/
+
 .titleBlock {
 	display: inline-block;
 	margin-top: 5em;
 	margin-bottom: -10em;
 	float: left;
+	padding-top: 0;
+	z-index: 2000;
 
 
 }
 
+.titleBlock h1 {
+	margin-top: -0.33em;
+	margin-right: .2em;
+	margin-left: .2em;
 
+}
 
 .titleBlock h4 {
 	text-align: center;
 	margin-top: -0.5em;
+	margin-bottom: 0;
 }
+
+/*Position and layout (including layering) for image*/
 
 .Mainimage {
 	margin-top: 0;
@@ -80,10 +108,17 @@ Layout Stylings
 }
 
 .image {
-	margin-top: -2em;
 	padding-top: 0;
 }
 
+.prismaPhoto {
+	z-index: 0;
+}
 
+/*Sidebar Layout*/
+
+.sidebar {
+	margin-top: 5%;
+}
 
 
