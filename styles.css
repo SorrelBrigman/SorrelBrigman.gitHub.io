@@ -52,7 +52,10 @@ Layout Stylings
 }
 
 .page-wrapper {
-	margin: 5%, 0, 7%, 5%;
+	padding-top: 2em;
+	padding-right: 4em;
+	padding-left: 3em;
+	padding-bottom: 4em;
 }
 .titleBlock {
 	display: inline-block;
@@ -61,6 +64,10 @@ Layout Stylings
 .titleBlock h4 {
 	text-align: center;
 	margin-top: -0.5em;
+}
+
+.image {
+	padding: 0;
 }
 
 
