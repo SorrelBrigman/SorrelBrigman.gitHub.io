@@ -14,7 +14,7 @@ Page Stylings
 	background-color: #D9D3BD;
 }
 
-.image {
+.mainImage {
 	background-color: #AB94AB;
 }
 
@@ -37,7 +37,7 @@ Page Stylings
 .button button {
 	background-color: #728B91;
 	color: #d9d3bD;
-	border: #4d3e4d;
+	border: 1px solid #4d3e4d;
 }
 
 /*****************************************************
@@ -59,15 +59,31 @@ Layout Stylings
 }
 .titleBlock {
 	display: inline-block;
+	margin-top: 5em;
+	margin-bottom: -10em;
+	float: left;
+
+
 }
+
+
 
 .titleBlock h4 {
 	text-align: center;
 	margin-top: -0.5em;
 }
 
-.image {
+.Mainimage {
+	margin-top: 0;
 	padding: 0;
+
 }
+
+.image {
+	margin-top: -2em;
+	padding-top: 0;
+}
+
+
 
 
