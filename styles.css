@@ -51,6 +51,23 @@ Page Stylings
 	border: 1px solid #4d3e4d;
 }
 
+.button button:hover {
+  background-color: #ccaccc;
+  color: #4d3e4d;
+  border: 1px solid #4d3e4d;
+}
+
+/*Follow Me Stylings*/
+
+.followMe a {
+	color: #4d3d4d;
+}
+
+.followMe a:hover {
+	color: #ccaccc;
+	text-decoration: none;
+}
+
 /*****************************************************
 Layout Stylings
 *****************************************************/
@@ -119,6 +136,19 @@ Layout Stylings
 
 .sidebar {
 	margin-top: 5%;
+}
+
+.sidebar h1 {
+	margin-bottom: 4%;
+}
+
+.sidebar p {
+	text-align: justify;
+	margin-left: 1em;
+}
+
+.followMe {
+	margin-top: 6%;
 }
 
 
