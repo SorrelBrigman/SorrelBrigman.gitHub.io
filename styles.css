@@ -8,6 +8,14 @@ Page Stylings
 	color: #4d3e4d;
 }
 
+h1, h4, button {
+  	font-family: 'Oswald', sans-serif;
+}
+
+p {
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.1em;
+}
 
 .background {
 	background-color: #4d3e4d;
@@ -59,13 +67,14 @@ Page Stylings
 
 /*Follow Me Stylings*/
 
-.followMe a {
-	color: #4d3d4d;
+
+.followMe img {
+	background-color: #4d3e4d;
+	
 }
 
-.followMe a:hover {
-	color: #ccaccc;
-	text-decoration: none;
+.followMe img:hover {
+	background-color: #728b91;
 }
 
 /*****************************************************
@@ -151,4 +160,17 @@ Layout Stylings
 	margin-top: 6%;
 }
 
+/*Follow Me Stylings*/
 
+.followMe a,
+.followMe img {
+	width: 32px;
+	height: auto;
+	padding: 2px;
+	border-radius: 100%;
+}
+
+.followMe img:hover {
+	text-decoration: none;
+	border-radius: 100%;
+}
