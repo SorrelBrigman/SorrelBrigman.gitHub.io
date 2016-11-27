@@ -51,6 +51,7 @@ p {
 	color: #4d3d4d;
 }
 
+
 /*Button colors*/
 
 .button button {
@@ -86,18 +87,24 @@ Layout Stylings
 /*Over all page layout*/
 .background {
 	padding-top: 2em;
-	padding-right: 0;
+	padding-right: 3em;
 	padding-left: 3em;
-	padding-bottom: 4em;
+	padding-bottom: 2em;
 }
 
 .page-wrapper {
 	padding-top: 2em;
 	padding-right: 4em;
 	padding-left: 3em;
-	padding-bottom: 4em;
+	padding-bottom: 2em;
 }
 
+
+/*Temporarily hiding button until functional*/
+
+.button {
+	display: none;
+}
 
 /*Layout and positioning of titleblock*/
 
@@ -157,7 +164,7 @@ Layout Stylings
 }
 
 .followMe {
-	margin-top: 10%;
+	margin-top: 2%;
 }
 
 /*Follow Me Stylings*/
