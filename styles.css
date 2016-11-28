@@ -114,6 +114,7 @@ Layout Stylings
 	margin-bottom: -10em;
 	float: left;
 	padding-top: 0;
+	position: absolute;
 	z-index: 2000;
 
 
