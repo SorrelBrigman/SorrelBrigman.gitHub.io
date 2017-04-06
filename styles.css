@@ -220,3 +220,15 @@ Layout Stylings
 	text-decoration: none;
 	border-radius: 100%;
 }
+
+/*Stylings for Technology page*/
+
+.Technologies a {
+	background-color: transparent;
+/*	border: 2px solid #4d3e4d;*/
+}
+
+.Technologies img {
+height: 50px;
+width: 100%;
+}
