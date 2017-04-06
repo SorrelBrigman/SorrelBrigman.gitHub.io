@@ -27,7 +27,7 @@ a:visted {
 }
 
 a:hover {
-	color: #AB94AB;
+	color: #728b91;
 	text-decoration: none;
 }
 
@@ -200,11 +200,20 @@ Layout Stylings
 /*Follow Me Stylings*/
 
 .followMe a,
-.followMe img {
+.followMe img,
+.followMe span {
 	width: 32px;
 	height: auto;
 	padding: 2px;
 	border-radius: 100%;
+}
+
+.followMe span {
+	background-color: white;
+	font-size: 1.2em;
+	padding: 6px;
+
+	border: 2px solid;
 }
 
 .followMe img:hover {
