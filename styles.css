@@ -237,3 +237,12 @@ Layout Stylings
 height: 50px;
 width: 100%;
 }
+
+/*Stylings for Projects page*/
+
+.projectImages {
+	width: 90%;
+	padding-left: 10%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}

@@ -9,11 +9,19 @@
     <a href="#!/"><h1>Projects</h1></a>
     <div class="projectContent">
      <a href="https://github.com/SorrelBrigman/frontend_capstone"><h3>Larger Local</h3></a>
+
+
      <p>I am a champion of small businesses, and love to see companies that I have followed and supported for years reach national acclaim. I wanted to create a site where like minded users could share favorite companies and products on a user curated site, helping these companies gain national prominence while sharing great products with eager customers.</p>
+
+      <img class="img-responsive projectImages" src="images/LargerLocal1.png" alt="image of Larger Local home page">
 
       <p>I started the project with the basic (no frills) version as the main goal. I wanted my users to be able to interact with already added products, and add new products themselves. I stored the users’ products in a database on Firebase, and displayed them on the page using AngularJS’s ng-repeat.  For base styling I used MaterializeCSS, and customized the color scheme using SASS. </p>
 
+      <img class="img-responsive projectImages" src="images/LargerLocal2.png" alt="detail view of product on larger local">
+
       <p>I liked my basic version of the site, but there was one major frustration: the form users used to add a product to the site was painfully long and overly technical (asking users to provide a link to the image address of the product). I wanted to provide an improved user experience for adding (at least the majority of the) products. I set out to utilize the Amazon Affiliate API. Amazon Web Services (AWS) provides thorough documentation of their services. I registered for and acquired the needed keys and ids to use their API. I was able to use it easily in their “sandbox” but was having difficulty encrypting the query to the API. Enter the Amazon Product API Node package. Once this package was integrated into my site (with the help of Express), I was able to utilize Amazon’s API to help my users more easily add products (and their images, links to buy, prices, etc). Not all small business products are on Amazon, so my *rather long* form entry is still available for non-Amazon items, but the bulk of the users are able to easily add their favorite products with the help of Amazon.</p>
+
+      <img class="img-responsive projectImages" src="images/LargerLocal3.png" alt="adding product with amazon">
 
       <h5><a href="https://github.com/SorrelBrigman/frontend_capstone">Github repo for Larger Local</a></h5>
       <h5><a href="https://glacial-garden-78355.herokuapp.com/#!/">Deployed site for Larger Local</a></h5>
