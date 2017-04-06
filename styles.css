@@ -6,9 +6,14 @@ Page Stylings
 
 body {
 	color: #4d3e4d;
+	background-color: #4d3e4d;
 }
 
 
+
+/*a h1 {
+	text-align: center;
+}*/
 
 a {
 	color: #4d3e4d;
