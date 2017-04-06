@@ -13,6 +13,27 @@ a {
 	text-decoration: none;
 }
 
+
+a:link {
+	color: #4d3e4d;
+	text-decoration: none;
+}
+
+a:visted {
+	color: #4d3e4d;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #AB94AB;
+	text-decoration: none;
+}
+
+a:active {
+	color: #4d3e4d;
+	text-decoration: none;
+}
+
 h1, h4, button {
   	font-family: 'Oswald', sans-serif;
 }
@@ -147,12 +168,13 @@ Layout Stylings
 }
 
 .image {
-	padding-top: 0;
+	padding: 0;
+	width: 100%;
 }
 
-.prismaPhoto {
+/*.prismaPhoto {
 	z-index: 0;
-}
+}*/
 
 /*Sidebar Layout*/
 

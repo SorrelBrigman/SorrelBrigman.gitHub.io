@@ -27,9 +27,9 @@ app.config(($routeProvider)=> {
       // use the projects ctrl
       controller: "projectsCtrl",
       //use the partial "projects"
-      templateUrl: "partials/inReview.html"
+      templateUrl: "partials/projects.html"
     })
-    .when("/technologies", {
+    .when("/tech", {
       // use the technologies ctrl
       controller: "technologiesCtrl",
       //use the partial "technologies"
