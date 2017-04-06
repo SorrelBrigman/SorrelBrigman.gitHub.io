@@ -8,6 +8,11 @@ Page Stylings
 	color: #4d3e4d;
 }
 
+a {
+	color: #4d3e4d;
+	text-decoration: none;
+}
+
 h1, h4, button {
   	font-family: 'Oswald', sans-serif;
 }
@@ -71,7 +76,7 @@ p {
 
 .followMe img {
 	background-color: #4d3e4d;
-	
+
 }
 
 .followMe img:hover {

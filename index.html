@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sorrel Brigman</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<script src="bower_components/bootstrap/dist/css/bootstrap.min.css"></script>">
 		<link href="https://fonts.googleapis.com/css?family=Dosis|Oswald:300,400,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
@@ -22,42 +22,32 @@
 					   </div>
 					</div>
 					<div class="col-md-5   sidebar">
-						<div class="row button">
-							<button class="btn btn-default col-md-4 col-md-offset-8 col-xs-4 col-xs-offset-8 button" type="button">Email Me</button>
-						</div>
-						<div class="row About">
-							<div class="col-md-10 col-md-offset-1">
-							   <h1>About</h1>
-							   <div class="aboutContent">
-								   <p>Sorrel began her software development career in 2016, studying at Nashville Software School.  Prior to software development, Sorrel has worked in the music and audiobook industry as an audio engineer.</p>
-								   <p>When she's away from the keyboard, she loves traveling, hiking, cooking, spending time with her family and church community, and drinking tea.</p>
-							   </div>
-							</div>
-							<div class="col-md-10 col-md-offset-1">
-								<h1>Projects</h1>
-								<div class="projectContent">
-									<p>Coming soon!</p>
-								</div>
-							</div>
-							<div class="col-md-10 col-md-offset-1 followMe">
-								<h1>Follow Me!</h1>
-							</div>
-							<div>
-								<div class="col-xs-1 col-xs-offset-2 followMe">
-									<a href="https://github.com/SorrelBrigman"><img src="images/GitHub.png" alt="github logo"></a>
-								</div>
-<!-- 								<div class="col-xs-1 col-xs-offset-2 followMe">
-									<a href="https://twitter.com/recordingsorrel"><img src="images/Twitter.png" alt="twitter logo"></a>
-								</div> -->
-								<div class="col-xs-1 col-xs-offset-2 followMe">
-									<a href="https://www.linkedin.com/in/sorrel-brigman"><img src="images/linkedInEdit.png" alt="linkedIn logo"></a>
-								</div>
-							</div>
-						</div>
+
+					  <!-- setup angular app -->
+					  <main>
+					    <div ng-app="myApp">
+					      <!-- setup ng-view -->
+					      <div ng-view></div>
+
+					    </div>
+					  </main>
+					<!-- end of angular app -->
+
 					</div>
 				</div>
 			</div>
 		</div>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="app/main.js"></script>
+		<script src="app/configAng.js"></script>
+		<script src="app/controllers/aboutCtrl.js"></script>
+		<script src="app/controllers/connectCtrl.js"></script>
+		<script src="app/controllers/homeCtrl.js"></script>
+		<script src="app/controllers/projectsCtrl.js"></script>
+		<script src="app/controllers/technologiesCtrl.js"></script>
 	</body>
 </html>
