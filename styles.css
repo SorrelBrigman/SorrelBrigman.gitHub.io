@@ -246,3 +246,22 @@ max-height: 75px;
 	margin-top: 3%;
 	margin-bottom: 3%;
 }
+
+.projectText {
+	text-align: center;
+}
+
+.subProjects {
+	border: 2px solid;
+	padding: 5%;
+	max-width: 250px;
+}
+
+.subProjectsImage {
+
+	padding: 0 auto;
+}
+
+.subProjects:hover {
+	border: 2px solid #728b91;
+}
