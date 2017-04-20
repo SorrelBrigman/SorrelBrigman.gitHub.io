@@ -6,5 +6,8 @@ $('a.active').removeClass("active");
 //apply actice class to about nav link
 $("a.about").addClass("active");
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 });
