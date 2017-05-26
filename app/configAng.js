@@ -32,8 +32,14 @@ app.config(($routeProvider)=> {
     .when("/projects/largerlocal", {
       // use the projects ctrl
       controller: "projectsCtrl",
-      //use the partial "projects"
+      //use the partial "largerLocal"
       templateUrl: "partials/largerlocal.html"
+    })
+    .when("/projects/similartastes", {
+      // use the projects ctrl
+      controller: "projectsCtrl",
+      //use the partial "similartastes"
+      templateUrl: "partials/similartastes.html"
     })
     .when("/tech", {
       // use the technologies ctrl
