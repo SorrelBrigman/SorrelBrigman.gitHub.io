@@ -1,0 +1,68 @@
+
+<div class="row About">
+  <div class="col-md-10 col-md-offset-1">
+      <a href="#!/about"><h1>About</h1></a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 Projects">
+    <a href="#!/projects"><h1>Projects</h1></a>
+    <div class="projectContent">
+     <a href="#!/projects"><h3>Similar Tastes</h3></a>
+
+
+     <p>One of the best things about living in Nashville is the plethora of amazing restaurants and food trucks in town. I love eating out. Almost to the point it’s a problem. (But it’s a vice I’ll continue to enjoy living with ;-) I love trying new places, and appreciate it when someone recommends a new place. But these recommended dining experiences occasionally  go wrong.  And it’s terrible. A vast majority of the time, this is because (I’ll find out later) the person who recommended the restaurant to me has completely different tastes than I do. I wanted to create an app to help minimize this problem.</p>
+
+     <img class="img-responsive projectImages" src="images/similarTasteHome.png" alt="image of Similar Tastes home page">
+
+      <p>I started out with the concept of using Yelp reviews to match users to other users who have rated restaurants similarly.  Both Harry and Sally gave Pinewood Social 5 stars and San Antonio Taco Company 1 star? They have similar tastes, and should be used as a baseline for each other in review prediction. To do this I would need access to Yelp’s reviews, and have a way to match users with their reviews. Unfortunately the Yelp API only returns 3 reviews per restaurant. And even more unfortunately, Yelp discontinued their API a month before. With that in mind, my path was curved toward web-scraping.</p>
+
+      <p>I knew I would want to save the data I was scraping, rather than scrape Yelp every time users accessed the site. I found the top 500 restaurants in Nashville (per Yelp), and created an array of their Yelp identifiers. I originally was going to only use the top 100, but kept seeing additional restaurant 10 or 20 slots ahead that I wanted on my list. I did mentioned that I enjoy eating out, right?</p>
+
+
+      <p>After created the array of 500 restaurant, I used Cheerio JS to scrape the basic restaurant information from the Yelp site. The unique Yelp identifier also serves as the extension on the URL for each restaurants page on the site, so I was able to automate the multiple calls to Yelp. Here is where I ran into my first roadblock with Yelp: With 500 restaurants, each with their own URL, I was hitting their site 500 times, and they didn’t like that. I got about 200 restaurants in, and was blocked out by a captcha. After about an hour, they granted access again. It took 3 attempts to get all of the basic restaurant data.</p>
+
+
+      <p>After getting the basic restaurant data, I used that information to iterate through all of the reviews for each of my restaurants. Reviews were listed up to 20 reviews at a time, so I again angered the Yelp overlords, and had to gather reviews in spurts. Although I had hoped to get all of my data for my project over a weekend, it took almost a week to get all the information I needed. I may or may not have made a point to hop on every new IP address I came in contact with. I have since been told there are numerous ways to circumvent IP addresses being blocked, but getting the data isn’t the point of my app, just a step. However, when I work on expanding my app, I will utilize a scraping method that doesn’t result in a solid week of captcha limited Yelp access.</p>
+
+      <p>At the conclusion of my scraping I had 496 restaurants, and almost 90,000 reviews. I utilized Node's built in fs to write a new JSON file with only unique users and their information (not their reviews), resulting in over 41,000 unique users. I input this information into a PostgreSQL database, using Bookshelf and Knex as the ORM.</p>
+
+      <img class="img-responsive projectImages" src="images/similarTastesList.png" alt="list of similar taste restaurants in the app">
+
+      <p>At this point I knew I would have to deviate from my original plan for establishing user tastes. I originally wanted to have a user rank 3 to 5 restaurants with specific star ratings, and match them with other users who rated those same 3-5 restaurants in the exact same way. After looking at my dataset and doing a little math, I realized each user had given an average of slightly over 2 reviews.  The likelihood of users matching with other users exactly on the rating of 3-5 restaurants was very slim, and the likelihood of those users over lapping on specific restaurants to predict new reviews was even slimmer.  I choose to forgo the multiple restaurant rating system to determine user tastes, and instead asked them to chose a restaurant they feel passionately about. I then determine if they passionately hate it, or love it.  If the user hates a given restaurant, the program will only return reviews from users who gave that restaurant a rating of 2 or below.  If they state they love the restaurant, the program will only return reviews from users who gave the restaurant a rating of 4 or above. These filtered reviews are my “relevant reviews.”</p>
+
+      <img class="img-responsive projectImages" src="images/similarTastesLoveOrHate.png" alt="list of similar taste restaurants in the app">
+
+      <p>Looking at only the reviews of users with “similar tastes”, when my current user wants a prediction of a review of another restaurant, I take an average of all relevant reviews of that restaurant and display that for the user.</p>
+
+      <img class="img-responsive projectImages" src="images/similarTastePositiveReview.png" alt="a review prediction that the user will like Husk">
+
+      <p>For restaurant recommendations, I filter through all relevant reviews of other restaurants that are a 4 or above. I then total the review ratings for each restaurant in that list, and display the top 5 restaurants.<p>
+
+       <img class="img-responsive projectImages" src="images/similarTastes5.png" alt="example of 5 recommendations">
+
+      <p>When users click on “More Info”, they are taken to a page with basic information about that particular restaurant, such as hours, location, and a link to that restaurant's website.</p>
+
+      <img class="img-responsive projectImages" src="images/similarTastesRestInfo.png" alt="example of restaurant information">
+
+      <p>The web version of the site is currently written in AngularJs. I used Bootstrap as my CSS framework, being I wanted to have this site be visually different from Larger Local. I used Angular-Chosen for the user’s selection of restaurants. I wanted to limit the user’s choice to only restaurants in my system, but I also didn’t want the user to scroll through almost 500 restaurants to find one they are looking for (talk about poor user experience). I like the presentation of Chosen (which allows a user to type in an input field and filter the options on the select menu), but I want to continue to work on the select system; it is still not as intuitive as I would like.</p>
+
+      <img class="img-responsive projectImages" src="images/similarTastesFilteredList.png" alt="example of Chosen filtering select options">
+      <p>I really enjoyed working on this app (did I mention I like eating out?), and have many additional features I would like to add.  For restaurant recommendation, I’d like to create an advanced option, where users can sort results by price range, location and type of food. I’d also like to build a mobile UI.  The current plan is to build it in React Native, although Swift is also quite alluring.</p>
+
+      <h5><a target="_blank" href="https://github.com/SorrelBrigman/backend_capstone">Github repo for Similar Tastes BackEnd</a></h5>
+      <h5><a target="_blank" href="https://github.com/SorrelBrigman/similar_tastes_nashville">Github repo for Similar Tastes AngularJS FrontEnd</a></h5>
+      <h5><a target="_blank" href="https://sorrelbrigman.github.io/similar_tastes_nashville">Deployed site for Similar Tastes</a></h5>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 Technologies">
+     <a href="#!/tech"><h1>Technologies</h1></a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+   <a href="#!/connect"><h1>Connect!</h1></a>
+  </div>
+</div>
